@@ -22,9 +22,4 @@ public class carSpawner : MonoBehaviour {
 		}
 	}
 
-	void OnCollisionEnter2D(Collision2D col){
-		if (col.gameObject.tag == "Enemy Car") {
-			Destroy(gameObject);
-		}
-	}
 }

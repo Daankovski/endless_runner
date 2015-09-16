@@ -24,4 +24,10 @@ public class carController : MonoBehaviour {
 		transform.position = position;
 		//Input.GetAxis("Vertical");
 	}
+	
+	void OnCollisionEnter2D(Collision2D col){
+		if (col.gameObject.tag == "Enemy") {
+			Destroy(gameObject);
+		}
+	}
 }
