@@ -52,6 +52,7 @@
      <Compile Include="Assets\_Scripts\carSpawner.cs" />
      <Compile Include="Assets\_Scripts\enemyCarMove.cs" />
      <Compile Include="Assets\_Scripts\roadController.cs" />
+     <Compile Include="Assets\_Scripts\splashScreenDelayed.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
