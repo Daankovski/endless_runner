@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\_Scripts\EnemyDestroyer.cs" />
+     <Compile Include="Assets\_Scripts\UIManager.cs" />
      <Compile Include="Assets\_Scripts\carController.cs" />
      <Compile Include="Assets\_Scripts\carSpawner.cs" />
      <Compile Include="Assets\_Scripts\enemyCarMove.cs" />

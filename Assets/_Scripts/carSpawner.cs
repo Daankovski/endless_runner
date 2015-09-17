@@ -2,7 +2,8 @@
 using System.Collections;
 
 public class carSpawner : MonoBehaviour {
-	public GameObject car;
+	public GameObject[] cars;
+	int carNo;
 	public float maxPos=2.2f;
 	public float delayTimer = 2f;
 	float timer;
@@ -17,7 +18,8 @@ public class carSpawner : MonoBehaviour {
 		if(timer<=0)
 		{
 			Vector3 carPos = new Vector3 (Random.Range (-2.25f, 2.2f), transform.position.y, transform.position.z);
-			Instantiate (car, carPos, transform.rotation);
+			carNo = Random.Range(0,5);
+			Instantiate (cars[carNo], carPos, transform.rotation);
 			timer = delayTimer;
 		}
 	}
