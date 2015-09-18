@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class carSpawner : MonoBehaviour {
+public class carSpawnerBot : MonoBehaviour {
 	public GameObject[] cars;
 	int carNo;
 	public float maxPos=2.25f;
@@ -17,7 +17,7 @@ public class carSpawner : MonoBehaviour {
 		timer -= Time.deltaTime;
 		if(timer<=0/* gameObject.tag == (SpawnTop)*/)
 		{
-			Vector3 carPos = new Vector3 (Random.Range (-2.25f, -0.45f), transform.position.y, transform.position.z);
+			Vector3 carPos = new Vector3 (Random.Range (0.55f,2.25f), transform.position.y, transform.position.z);
 			carNo = Random.Range(0,5);
 			Instantiate (cars[carNo], carPos, transform.rotation);
 			timer = delayTimer;
