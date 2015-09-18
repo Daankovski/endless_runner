@@ -5,7 +5,12 @@ public class carController : MonoBehaviour {
 
 	public float carSpeed = 8f;
 	public float carVert = 5f;
-	public float maxPos = 2.2f;
+
+    public float maxTop;
+    public float maxBot;
+    public float maxLeft;
+    public float maxRight;
+
 	Vector3 position;
 
 	// Use this for initialization
@@ -18,8 +23,8 @@ public class carController : MonoBehaviour {
 		position.x += Input.GetAxis("Horizontal") * carSpeed * Time.deltaTime;
 		position.y += Input.GetAxis("Vertical") * carVert * Time.deltaTime;
 
-		position.x=Mathf.Clamp(position.x,-2.2f,2.2f);
-		position.y=Mathf.Clamp(position.y,-5.6f,3.4f);	
+		position.x=Mathf.Clamp(position.x,maxLeft,maxRight);
+		position.y=Mathf.Clamp(position.y,maxBot,maxTop);	
 
 		transform.position = position;
 		//Input.GetAxis("Vertical");

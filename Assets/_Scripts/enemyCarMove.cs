@@ -3,7 +3,7 @@ using System.Collections;
 
 public class enemyCarMove : MonoBehaviour {
 
-	public int speed; 
+	private int speed; 
 
 	// Use this for initialization
 	void Start () {

@@ -3,9 +3,10 @@ using System.Collections;
 
 public class carSpawner : MonoBehaviour {
 	public GameObject[] cars;
-	int carNo;
-	public float maxPos=2.25f;
-	public float delayTimer = 2f;
+	private int carNo;
+    public float maxPos;
+    public float minPos;
+    public float delayTimer;
 	float timer;
 	// Use this for initialization
 	void Start () {
@@ -17,14 +18,14 @@ public class carSpawner : MonoBehaviour {
 		timer -= Time.deltaTime;
         if (timer <= 0 && gameObject.tag == "SpawnTop")
 		{
-			Vector3 carPos = new Vector3 (Random.Range (-2.25f, -0.45f), transform.position.y, transform.position.z);
+			Vector3 carPos = new Vector3 (Random.Range (maxPos, minPos), transform.position.y, transform.position.z);
 			carNo = Random.Range(0,5);
 			Instantiate (cars[carNo], carPos, transform.rotation);
 			timer = delayTimer;
 		}
 		else if (timer <= 0 && gameObject.tag == "SpawnBot")
 		{
-			Vector3 carPos = new Vector3 (Random.Range (-0.45f, 2.25f), transform.position.y, transform.position.z);
+			Vector3 carPos = new Vector3 (Random.Range (minPos, maxPos), transform.position.y, transform.position.z);
 			carNo = Random.Range(0,5);
 			Instantiate (cars[carNo], carPos, transform.rotation);
 			timer = delayTimer;
