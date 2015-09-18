@@ -15,19 +15,19 @@ public class carSpawner : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		timer -= Time.deltaTime;
-		if(timer<=0/* gameObject.tag == (SpawnTop)*/)
+        if (timer <= 0 && gameObject.tag == "SpawnTop")
 		{
 			Vector3 carPos = new Vector3 (Random.Range (-2.25f, -0.45f), transform.position.y, transform.position.z);
 			carNo = Random.Range(0,5);
 			Instantiate (cars[carNo], carPos, transform.rotation);
 			timer = delayTimer;
 		}
-		/*else if(timer<=0,gameObject.tag == "SpawnBot")
+		else if (timer <= 0 && gameObject.tag == "SpawnBot")
 		{
-			Vector3 carPos = new Vector3 (Random.Range (-0.45, 2.25f), transform.position.y, transform.position.z);
+			Vector3 carPos = new Vector3 (Random.Range (-0.45f, 2.25f), transform.position.y, transform.position.z);
 			carNo = Random.Range(0,5);
 			Instantiate (cars[carNo], carPos, transform.rotation);
 			timer = delayTimer;
-		}*/
+		}
 	}
 }
