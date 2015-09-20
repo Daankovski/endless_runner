@@ -4,10 +4,12 @@ using System.Collections;
 public class enemyCarMove : MonoBehaviour {
 
 	private int speed; 
+	private int minSpeed = 5;
+	private int maxSpeed = 10;
 
 	// Use this for initialization
 	void Start () {
-		speed = Random.Range(5,10);
+		speed = Random.Range(minSpeed,maxSpeed);
 	}
 	
 	// Update is called once per frame

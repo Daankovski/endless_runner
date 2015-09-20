@@ -11,10 +11,17 @@ public class carController : MonoBehaviour {
     public float maxLeft;
     public float maxRight;
 
+	public Animator anim;
+	public Animation anim2;
+
+	public float deathTimer = 2f;
+	public bool isHit = false;
+
 	Vector3 position;
 
 	// Use this for initialization
 	void Start () {
+		anim = GetComponent <Animator> ();
 		position = transform.position;
 	}
 	
@@ -28,11 +35,30 @@ public class carController : MonoBehaviour {
 
 		transform.position = position;
 		//Input.GetAxis("Vertical");
+
+		GameOver ();
 	}
-	
+
 	void OnCollisionEnter2D(Collision2D col){
 		if (col.gameObject.tag == "Enemy") {
-			Destroy(gameObject);
+			anim.SetBool("death",true);
+			isHit = true;
+			//Destroy(gameObject);
 		}
 	}
+
+	void GameOver(){
+		if (isHit == true) {
+			deathTimer -= Time.deltaTime;
+			Debug.Log (deathTimer);
+			
+			if (deathTimer <= 0){
+				if (Time.timeScale == 1){
+					Time.timeScale = 0;
+					isHit = false;
+				}
+
+				}
+			}
+		}
 }

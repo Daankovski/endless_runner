@@ -4,7 +4,8 @@ using System.Collections;
 public class carSpawner : MonoBehaviour {
 	public GameObject[] cars;
 	private int carNo;
-    public float maxPos;
+	[SerializeField]
+    private float maxPos;
     public float minPos;
     public float delayTimer;
 	float timer;
