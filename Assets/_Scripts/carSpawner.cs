@@ -20,14 +20,14 @@ public class carSpawner : MonoBehaviour {
         if (timer <= 0 && gameObject.tag == "SpawnTop")
 		{
 			Vector3 carPos = new Vector3 (Random.Range (maxPos, minPos), transform.position.y, transform.position.z);
-			carNo = Random.Range(0,5);
+			carNo = Random.Range(0,6);
 			Instantiate (cars[carNo], carPos, transform.rotation);
 			timer = delayTimer;
 		}
 		else if (timer <= 0 && gameObject.tag == "SpawnBot")
 		{
 			Vector3 carPos = new Vector3 (Random.Range (minPos, maxPos), transform.position.y, transform.position.z);
-			carNo = Random.Range(0,5);
+			carNo = Random.Range(0,6);
 			Instantiate (cars[carNo], carPos, transform.rotation);
 			timer = delayTimer;
 		}

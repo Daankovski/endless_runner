@@ -14,8 +14,8 @@ public class carController : MonoBehaviour {
 	public Animator anim;
 	public Animation anim2;
 
-	public float deathTimer = 2f;
-	public bool isHit = false;
+	public static float deathTimer = 2f;
+	public static bool isHit = false;
 
 	Vector3 position;
 
@@ -43,6 +43,7 @@ public class carController : MonoBehaviour {
 		if (col.gameObject.tag == "Enemy") {
 			anim.SetBool("death",true);
 			isHit = true;
+
 			//Destroy(gameObject);
 		}
 	}
@@ -55,10 +56,8 @@ public class carController : MonoBehaviour {
 			if (deathTimer <= 0){
 				if (Time.timeScale == 1){
 					Time.timeScale = 0;
-					isHit = false;
-				}
-
 				}
 			}
 		}
+	}
 }

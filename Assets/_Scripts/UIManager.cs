@@ -14,6 +14,7 @@ public class UIManager : MonoBehaviour {
 	}
 
 	public void Pause(){
+		if (carController.isHit && carController.deathTimer >= 5f)
 		if (Time.timeScale == 1){
 			Time.timeScale = 0;
 		}
