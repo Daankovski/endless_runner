@@ -16,6 +16,7 @@ public class carController : MonoBehaviour {
 
 	public static float deathTimer = 2f;
 	public static bool isHit = false;
+	public int crashCount = 0;
 
 	Vector3 position;
 
@@ -40,11 +41,17 @@ public class carController : MonoBehaviour {
 	}
 
 	void OnCollisionEnter2D(Collision2D col){
-		if (col.gameObject.tag == "Enemy") {
-			anim.SetBool("death",true);
-			isHit = true;
-
+		if (col.gameObject.tag == "Enemy" && crashCount == 0) {
+			anim.SetBool ("stage1", true);
+			crashCount += 1;
 			//Destroy(gameObject);
+		} else if (col.gameObject.tag == "Enemy" && crashCount == 1) {
+			anim.SetBool ("stage2", true);
+			crashCount += 1;
+		}else if (col.gameObject.tag == "Enemy" && crashCount == 2) {
+			anim.SetBool ("death", true);
+			crashCount += 1;
+			isHit = true;
 		}
 	}
 
