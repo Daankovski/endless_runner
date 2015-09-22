@@ -1,25 +1,45 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class UIManager : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-	
+	public void Pause(){
+			if (Time.timeScale == 1){
+				Time.timeScale = 0;
+//			GetComponent<AudioSource>("AmbulanceSiren").audio.Pause();
+			//((AudioSource)GameObject.Find("car").GetComponent("AmbulaceSiren")).audio.Pause();
+			}
+			else if (Time.timeScale == 0){
+				Time.timeScale = 1;
+	//		GetComponent<AudioSource>("AmbulanceSiren").audio.Play();
+			//((AudioSource)GameObject.Find("car").GetComponent("AmbulaceSiren")).audio.Play();
+			}
+		}
+	public Button StartM;
+	void Start () 
+	{
+		StartM = StartM.GetComponent<Button> ();
 	}
 	
-	// Update is called once per frame
-	void Update () {
+	public void StartLevel()
+	{
+		Application.LoadLevel ("mainScene");
+		
+	}
 	
+	public void QuitGame()
+	{
+		Application.Quit ();
 	}
 
-	public void Pause(){
-		if (carController.isHit && carController.deathTimer >= 5f)
-		if (Time.timeScale == 1){
-			Time.timeScale = 0;
-		}
-		else if (Time.timeScale == 0){
-			Time.timeScale = 1;
-		}
+	public void HowTo()
+	{
+		Application.LoadLevel ("HowTo");
+	}
+
+	public void Menu()
+	{
+		Application.LoadLevel ("Menu");
 	}
 }

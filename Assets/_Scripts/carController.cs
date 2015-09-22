@@ -67,15 +67,13 @@ public class carController : MonoBehaviour {
 			crashCount = 1;
 
 		}
-		else if (col.gameObject.name == "item5(Clone)") {
+		 if (col.gameObject.name == "item5(Clone)") {
 			Destroy(col.gameObject);
 		}
 	}
-
 	void GameOver(){
 		if (isHit == true) {
 			deathTimer -= Time.deltaTime;
-			Debug.Log (deathTimer);
 			
 			if (deathTimer <= 0){
 				if (Time.timeScale == 1){
