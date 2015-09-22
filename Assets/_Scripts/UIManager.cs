@@ -4,7 +4,7 @@ using System.Collections;
 
 public class UIManager : MonoBehaviour {
 
-	public void Pause(){
+    public void Pause(){
 			if (Time.timeScale == 1){
 				Time.timeScale = 0;
 //			GetComponent<AudioSource>("AmbulanceSiren").audio.Pause();
@@ -20,7 +20,7 @@ public class UIManager : MonoBehaviour {
 	void Start () 
 	{
 		StartM = StartM.GetComponent<Button> ();
-	}
+    }
 	
 	public void StartLevel()
 	{
@@ -43,3 +43,4 @@ public class UIManager : MonoBehaviour {
 		Application.LoadLevel ("Menu");
 	}
 }
+
