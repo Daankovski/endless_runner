@@ -3,8 +3,8 @@ using System.Collections;
 
 public class carController : MonoBehaviour {
 
-	public float carSpeed = 8f;
-	public float carVert = 5f;
+	public float carSpeed = 5f;
+	public float carVert = 1f;
 
     public float maxTop;
     public float maxBot;
@@ -66,6 +66,9 @@ public class carController : MonoBehaviour {
 			anim.SetBool ("stage2", false);
 			crashCount = 1;
 
+		}
+		else if (col.gameObject.name == "item5(Clone)") {
+			Destroy(col.gameObject);
 		}
 	}
 
