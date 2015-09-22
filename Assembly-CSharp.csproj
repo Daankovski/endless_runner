@@ -52,6 +52,7 @@
      <Compile Include="Assets\_Scripts\carController.cs" />
      <Compile Include="Assets\_Scripts\carSpawner.cs" />
      <Compile Include="Assets\_Scripts\enemyCarMove.cs" />
+     <Compile Include="Assets\_Scripts\pickUp.cs" />
      <Compile Include="Assets\_Scripts\roadController.cs" />
      <Compile Include="Assets\_Scripts\splashScreenDelayed.cs" />
  <Reference Include="UnityEngine.UI">

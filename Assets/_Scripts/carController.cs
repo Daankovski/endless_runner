@@ -43,15 +43,29 @@ public class carController : MonoBehaviour {
 	void OnCollisionEnter2D(Collision2D col){
 		if (col.gameObject.tag == "Enemy" && crashCount == 0) {
 			anim.SetBool ("stage1", true);
+			anim.SetBool ("heal1", false);
+			anim.SetBool ("heal2", false);
 			crashCount += 1;
 			//Destroy(gameObject);
 		} else if (col.gameObject.tag == "Enemy" && crashCount == 1) {
 			anim.SetBool ("stage2", true);
+			anim.SetBool ("heal1", false);
+			anim.SetBool ("heal2", false);
 			crashCount += 1;
 		}else if (col.gameObject.tag == "Enemy" && crashCount == 2) {
 			anim.SetBool ("death", true);
 			crashCount += 1;
 			isHit = true;
+		}else if (col.gameObject.tag == "PickUp" && crashCount == 1){
+			anim.SetBool ("heal1", true);
+			anim.SetBool ("stage1",false);
+			crashCount =0;
+
+		}else if (col.gameObject.tag == "PickUp" && crashCount == 2){
+			anim.SetBool ("heal2", true);
+			anim.SetBool ("stage2", false);
+			crashCount = 1;
+
 		}
 	}
 
