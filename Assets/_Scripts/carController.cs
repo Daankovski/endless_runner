@@ -29,8 +29,7 @@ public class carController : MonoBehaviour {
 	[SerializeField]
 	private int crashCount = 0;
 
-
-	Vector3 position;
+    Vector3 position;
 
 	// Use this for initialization
 	void Start () {
@@ -72,9 +71,7 @@ public class carController : MonoBehaviour {
 			anim.SetBool ("death", true);
 			crashCount += 1;
 			isHit = true;
-		} else if (col.gameObject.tag == "Enemy" && crashCount == 3){
-			Application.LoadLevel ("GameOver");
-		}else if (col.gameObject.tag == "PickUp" && crashCount == 1){
+		} else if (col.gameObject.tag == "PickUp" && crashCount == 1){
 			anim.SetBool ("heal1", true);
 			anim.SetBool ("stage1",false);
 			crashCount =0;
@@ -92,8 +89,10 @@ public class carController : MonoBehaviour {
 	void GameOver(){
 		if (isHit == true) {
 			deathTimer -= Time.deltaTime;
-			
-			if (deathTimer <= 0){
+            Application.LoadLevel("GameOver");
+            crashCount = 0;
+
+            if (deathTimer <= 0){
 				if (Time.timeScale == 1){
 					Time.timeScale = 0;
 				}
