@@ -18,12 +18,14 @@ public class carController : MonoBehaviour {
 	public static bool isHit = false;
 	public int crashCount = 0;
 
+
 	Vector3 position;
 
 	// Use this for initialization
 	void Start () {
 		anim = GetComponent <Animator> ();
 		position = transform.position;
+   
 	}
 	
 	// Update is called once per frame
@@ -38,6 +40,8 @@ public class carController : MonoBehaviour {
 		//Input.GetAxis("Vertical");
 
 		GameOver ();
+    
+     
 	}
 
 	void OnCollisionEnter2D(Collision2D col){
