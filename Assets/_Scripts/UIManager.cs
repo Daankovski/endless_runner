@@ -4,7 +4,7 @@ using System.Collections;
 
 public class UIManager : MonoBehaviour {
 
-    private int score;
+    public static int score;
     private int scoreTimer;
     public Text scoreText;
       

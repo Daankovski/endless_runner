@@ -10,7 +10,7 @@ public class ShowScore : MonoBehaviour {
 	
 	// Use this for initialization
 	void Start () {
-		endScore = ScoreSript.score;
+		endScore = UIManager.score;
 	}
 	
 	// Update is called once per frame
