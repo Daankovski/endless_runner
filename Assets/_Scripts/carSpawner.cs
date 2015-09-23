@@ -6,8 +6,10 @@ public class carSpawner : MonoBehaviour {
 	private int carNo;
 	[SerializeField]
     private float maxPos;
-    public float minPos;
-    public float delayTimer;
+	[SerializeField]
+    private float minPos;
+	[SerializeField]
+    private float delayTimer;
 	float timer;
 	// Use this for initialization
 	void Start () {

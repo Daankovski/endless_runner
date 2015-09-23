@@ -3,20 +3,31 @@ using System.Collections;
 
 public class carController : MonoBehaviour {
 
-	public float carSpeed = 5f;
-	public float carVert = 1f;
+	[SerializeField]
+	private float carSpeed = 5f;
+	[SerializeField]
+	private float carVert = 1f;
 
-    public float maxTop;
-    public float maxBot;
-    public float maxLeft;
-    public float maxRight;
+	[SerializeField]
+    private float maxTop;
+	[SerializeField]
+    private float maxBot;
+	[SerializeField]
+    private float maxLeft;
+	[SerializeField]
+    private float maxRight;
 
-	public Animator anim;
-	public Animation anim2;
+	[SerializeField]
+	private Animator anim;
+	[SerializeField]
+	private Animation anim2;
 
-	public static float deathTimer = 1f;
-	public static bool isHit = false;
-	public int crashCount = 0;
+	[SerializeField]
+	private static float deathTimer = 1f;
+	[SerializeField]
+	private static bool isHit = false;
+	[SerializeField]
+	private int crashCount = 0;
 
 
 	Vector3 position;
