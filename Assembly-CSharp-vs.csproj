@@ -49,9 +49,13 @@
      <Compile Include="Assets\_Scripts\EnemyDestroyer.cs" />
      <Compile Include="Assets\_Scripts\IgnoreMidWall.cs" />
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
      <Compile Include="Assets\_Scripts\LoadScenes.cs" />
      <Compile Include="Assets\_Scripts\ScoreSript.cs" />
      <Compile Include="Assets\_Scripts\ShowScore.cs" />
+=======
+     <Compile Include="Assets\_Scripts\PlayerInputs.cs" />
+>>>>>>> Stashed changes
 =======
      <Compile Include="Assets\_Scripts\PlayerInputs.cs" />
 >>>>>>> Stashed changes
