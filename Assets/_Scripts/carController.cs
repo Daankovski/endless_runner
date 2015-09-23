@@ -41,6 +41,7 @@ public class carController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		
 		position.x += Input.GetAxis("Horizontal") * carSpeed * Time.deltaTime;
 		position.y += Input.GetAxis("Vertical") * carVert * Time.deltaTime;
 

@@ -4,42 +4,79 @@ using System.Collections;
 
 public class UIManager : MonoBehaviour {
 
-    public void Pause(){
+    private int score;
+    private int scoreTimer;
+    public Text scoreText;
+      
+
+    public void Pause() {
 			if (Time.timeScale == 1){
 				Time.timeScale = 0;
-//			GetComponent<AudioSource>("AmbulanceSiren").audio.Pause();
-			//((AudioSource)GameObject.Find("car").GetComponent("AmbulaceSiren")).audio.Pause();
+                   
 			}
+
 			else if (Time.timeScale == 0){
 				Time.timeScale = 1;
-	//		GetComponent<AudioSource>("AmbulanceSiren").audio.Play();
-			//((AudioSource)GameObject.Find("car").GetComponent("AmbulaceSiren")).audio.Play();
+            
 			}
-		}
-	public Button StartM;
-	void Start () 
-	{
-		StartM = StartM.GetComponent<Button> ();
     }
-	
-	public void StartLevel()
-	{
+
+	private Button StartM;
+
+    
+	void Start () {
+		StartM = StartM.GetComponent<Button> ();
+
+        //Score Variables
+        score = 0;
+        scoreTimer = 0;
+        SetScoreText();
+        //
+    }
+
+    void Update() {
+        SetScore();
+    }
+
+    void SetScore()
+    {
+        if (gameObject.CompareTag("Score"))//Looks for an object with a tag that equals Score
+        {
+            if (scoreTimer < 20 && Time.timeScale != 0)//Makes the scoreTimer count to 20 if the Time.timeScale is not equal to 0 and the game is playing
+            {
+                scoreTimer += 1;
+            }
+
+            else if (scoreTimer == 20)//When the scoreTimer reaches 20 it adds 1 to score
+            {
+                scoreTimer = 0;
+                score = score + 1;
+            }
+
+            //Debug.Log(score);
+            SetScoreText();
+        }
+    }
+
+    void SetScoreText() {
+        scoreText.text = "Score: " + score;
+    }
+
+
+    public void StartLevel() { 
 		Application.LoadLevel ("mainScene");
 
 	}
 	
-	public void QuitGame()
-	{
+	public void QuitGame() {
 		Application.Quit ();
 	}
 
-	public void HowTo()
-	{
+	public void HowTo()	{
 		Application.LoadLevel ("HowTo");
 	}
 
-	public void Menu()
-	{
+	public void Menu() {
 		Application.LoadLevel ("Menu");
 	}
 
