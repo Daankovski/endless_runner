@@ -4,8 +4,8 @@ using System.Collections;
 public class enemyCarMove : MonoBehaviour {
 
 	private int speed; 
-	private int minSpeed = 5;
-	private int maxSpeed = 10;
+	private int minSpeed = 3;
+	private int maxSpeed = 8;
 
 	// Use this for initialization
 	void Start () {
