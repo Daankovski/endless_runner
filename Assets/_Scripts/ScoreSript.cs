@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 public class ScoreSript : MonoBehaviour {
 
-    private int score;
+    public static int score;
     private int scoreTimer;
     public Text scoreText;
 
@@ -26,7 +26,7 @@ public class ScoreSript : MonoBehaviour {
             {
                 scoreTimer = 0;
                 score = score + 1;
-                Debug.Log(score);
+               // Debug.Log(score);
             }
 
             SetScoreText();

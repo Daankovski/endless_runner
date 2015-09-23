@@ -14,7 +14,7 @@ public class carController : MonoBehaviour {
 	public Animator anim;
 	public Animation anim2;
 
-	public static float deathTimer = 2f;
+	public static float deathTimer = 1f;
 	public static bool isHit = false;
 	public int crashCount = 0;
 
@@ -56,10 +56,12 @@ public class carController : MonoBehaviour {
 			anim.SetBool ("heal1", false);
 			anim.SetBool ("heal2", false);
 			crashCount += 1;
-		}else if (col.gameObject.tag == "Enemy" && crashCount == 2) {
+		} else if (col.gameObject.tag == "Enemy" && crashCount == 2) {
 			anim.SetBool ("death", true);
 			crashCount += 1;
 			isHit = true;
+		} else if (col.gameObject.tag == "Enemy" && crashCount == 3){
+			Application.LoadLevel ("GameOver");
 		}else if (col.gameObject.tag == "PickUp" && crashCount == 1){
 			anim.SetBool ("heal1", true);
 			anim.SetBool ("stage1",false);

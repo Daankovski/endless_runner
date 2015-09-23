@@ -25,7 +25,7 @@ public class UIManager : MonoBehaviour {
 	public void StartLevel()
 	{
 		Application.LoadLevel ("mainScene");
-		
+
 	}
 	
 	public void QuitGame()
@@ -42,5 +42,6 @@ public class UIManager : MonoBehaviour {
 	{
 		Application.LoadLevel ("Menu");
 	}
+
 }
 

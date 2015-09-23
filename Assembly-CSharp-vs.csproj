@@ -48,7 +48,9 @@
   <ItemGroup>
      <Compile Include="Assets\_Scripts\EnemyDestroyer.cs" />
      <Compile Include="Assets\_Scripts\IgnoreMidWall.cs" />
+     <Compile Include="Assets\_Scripts\LoadScenes.cs" />
      <Compile Include="Assets\_Scripts\ScoreSript.cs" />
+     <Compile Include="Assets\_Scripts\ShowScore.cs" />
      <Compile Include="Assets\_Scripts\UIManager.cs" />
      <Compile Include="Assets\_Scripts\carController.cs" />
      <Compile Include="Assets\_Scripts\carSpawner.cs" />
