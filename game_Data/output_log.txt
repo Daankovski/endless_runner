@@ -21,45 +21,21 @@ Loading C:\Users\Phineas\Documents\endless_runner\game_Data\Managed\UnityEngine.
 Platform assembly: C:\Users\Phineas\Documents\endless_runner\game_Data\Managed\UnityEngine.UI.dll (this message is harmless)
 Loading C:\Users\Phineas\Documents\endless_runner\game_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
 Platform assembly: C:\Users\Phineas\Documents\endless_runner\game_Data\Managed\System.Core.dll (this message is harmless)
-- Completed reload, in  0.202 seconds
+- Completed reload, in  0.268 seconds
 desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
 Platform assembly: C:\Users\Phineas\Documents\endless_runner\game_Data\Managed\System.dll (this message is harmless)
 Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 4.008372 ms
+UnloadTime: 4.128378 ms
 
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 201.
-Total: 0.261724 ms (FindLiveObjects: 0.031580 ms CreateObjectMapping: 0.009868 ms MarkObjects: 0.210011 ms  DeleteObjects: 0.009868 ms)
-
-Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 1.656009 ms
-
-Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 185.
-Total: 0.280672 ms (FindLiveObjects: 0.019737 ms CreateObjectMapping: 0.007895 ms MarkObjects: 0.180009 ms  DeleteObjects: 0.072635 ms)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at UIManager.Start () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.805700 ms
-
-Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 203.
-Total: 0.261724 ms (FindLiveObjects: 0.018553 ms CreateObjectMapping: 0.011842 ms MarkObjects: 0.226196 ms  DeleteObjects: 0.004342 ms)
+Unloading 2 unused Assets to reduce memory usage. Loaded Objects now: 203.
+Total: 0.259355 ms (FindLiveObjects: 0.020922 ms CreateObjectMapping: 0.012237 ms MarkObjects: 0.219880 ms  DeleteObjects: 0.005131 ms)
 
 Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.422785 ms
+UnloadTime: 1.454288 ms
 
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 350.
-Total: 0.295673 ms (FindLiveObjects: 0.025659 ms CreateObjectMapping: 0.016579 ms MarkObjects: 0.243565 ms  DeleteObjects: 0.009079 ms)
-
-ArgumentException: The thing you want to instantiate is null.
-  at UnityEngine.Object.CheckNullArgument (System.Object arg, System.String message) [0x00000] in <filename unknown>:0 
-  at UnityEngine.Object.Instantiate (UnityEngine.Object original, Vector3 position, Quaternion rotation) [0x00000] in <filename unknown>:0 
-  at carSpawner.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 350.
+Total: 0.272777 ms (FindLiveObjects: 0.027238 ms CreateObjectMapping: 0.016579 ms MarkObjects: 0.217116 ms  DeleteObjects: 0.011447 ms)
 
